@@ -4,7 +4,6 @@ const CONFIG = {
   name: 'compendiumhealth.github.io',
 
   origin: 'https://compendiumhealth.github.io',
-  basePathname: '/',
   trailingSlash: false,
 
   title: 'compendiumhealth',

@@ -1,6 +1,10 @@
 import path from "path";
 import {defineConfig} from "vite";
 
+export default {
+  base: '/plot/'
+}
+
 export default defineConfig({
   root: "./test/plots",
   base: "/plot/",

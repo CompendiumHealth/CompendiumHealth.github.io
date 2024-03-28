@@ -5,17 +5,17 @@ export default {
   base: '/plot/'
 }
 
-export default defineConfig({
-  root: "./test/plots",
-  base: "/plot/",
-  publicDir: path.resolve("./test"),
-  resolve: {
-    alias: {
-      "@observablehq/plot": path.resolve("./src/index.js")
-    }
-  },
-  server: {
-    port: 8008,
-    open: "/"
-  }
-});
+// export default defineConfig({
+//   root: "./test/plots",
+//   base: "/plot/",
+//   publicDir: path.resolve("./test"),
+//   resolve: {
+//     alias: {
+//       "@observablehq/plot": path.resolve("./src/index.js")
+//     }
+//   },
+//   server: {
+//     port: 8008,
+//     open: "/"
+//   }
+// });

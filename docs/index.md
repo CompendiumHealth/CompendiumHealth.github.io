@@ -1,12 +1,9 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-titleTemplate: "The JavaScript library for exploratory data visualization"
+titleTemplate: "Shop and compare diagnostic testing in your area"
 
 head:
-  - - link
-    - rel: canonical
-      href: https://observablehq.com/plot/
   - - meta
     - name: title
       content: Zephyr Health
@@ -21,13 +18,7 @@ head:
       content: "@zephyrhealth"
   - - meta
     - property: og:description
-      content: The JavaScript library for exploratory data visualization
-  - - meta
-    - property: og:image
-      content: https://static.observableusercontent.com/thumbnail/64f414fef8a91248865f5759641b0cf537bc87c0aaf57dc368ffe673013eccaa.jpg
-  - - meta
-    - property: og:site_name
-      content: Observable
+      content: Shop and compare diagnostic testing in your area
   - - meta
     - property: og:title
       content: Zephyr Health

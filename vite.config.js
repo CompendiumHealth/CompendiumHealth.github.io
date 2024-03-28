@@ -3,6 +3,7 @@ import {defineConfig} from "vite";
 
 export default defineConfig({
   root: "./test/plots",
+  base: "/plot/",
   publicDir: path.resolve("./test"),
   resolve: {
     alias: {

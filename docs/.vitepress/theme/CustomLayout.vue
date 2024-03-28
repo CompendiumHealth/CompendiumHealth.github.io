@@ -11,10 +11,10 @@ const {Layout} = DefaultTheme;
 <template>
   <Layout>
     <template #home-features-before>
-      <ExamplesGrid />
+      <!-- <ExamplesGrid /> -->
     </template>
     <template #home-features-after>
-      <ObservablePromo />
+      <!-- <ObservablePromo /> -->
     </template>
   </Layout>
 </template>

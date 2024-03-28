@@ -1,0 +1,23 @@
+// docs/.vitepress/theme/gallery.data.js
+import { Runtime } from "file:///Users/tonysun/Documents/Research/git/zephyrhealthcare.github.io/node_modules/@observablehq/runtime/src/index.js";
+var gallery_data_default = {
+  async load() {
+    const runtime = new Runtime();
+    const module = runtime.module((await import("https://api.observablehq.com/@observablehq/plot-gallery.js?v=4")).default);
+    const data = [];
+    module.define("md", () => String.raw);
+    module.redefine("previews", () => (chunk) => data.push(...chunk));
+    const values = [];
+    for (const output of module._resolve("previews")._outputs) {
+      if (output._name) {
+        values.push(module.value(output._name));
+      }
+    }
+    await Promise.all(values);
+    return data;
+  }
+};
+export {
+  gallery_data_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsiZG9jcy8udml0ZXByZXNzL3RoZW1lL2dhbGxlcnkuZGF0YS5qcyJdLAogICJzb3VyY2VzQ29udGVudCI6IFsiY29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2Rpcm5hbWUgPSBcIi9Vc2Vycy90b255c3VuL0RvY3VtZW50cy9SZXNlYXJjaC9naXQvemVwaHlyaGVhbHRoY2FyZS5naXRodWIuaW8vZG9jcy8udml0ZXByZXNzL3RoZW1lXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ZpbGVuYW1lID0gXCIvVXNlcnMvdG9ueXN1bi9Eb2N1bWVudHMvUmVzZWFyY2gvZ2l0L3plcGh5cmhlYWx0aGNhcmUuZ2l0aHViLmlvL2RvY3MvLnZpdGVwcmVzcy90aGVtZS9nYWxsZXJ5LmRhdGEuanNcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfaW1wb3J0X21ldGFfdXJsID0gXCJmaWxlOi8vL1VzZXJzL3RvbnlzdW4vRG9jdW1lbnRzL1Jlc2VhcmNoL2dpdC96ZXBoeXJoZWFsdGhjYXJlLmdpdGh1Yi5pby9kb2NzLy52aXRlcHJlc3MvdGhlbWUvZ2FsbGVyeS5kYXRhLmpzXCI7aW1wb3J0IHtSdW50aW1lfSBmcm9tIFwiQG9ic2VydmFibGVocS9ydW50aW1lXCI7XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgYXN5bmMgbG9hZCgpIHtcbiAgICBjb25zdCBydW50aW1lID0gbmV3IFJ1bnRpbWUoKTtcbiAgICBjb25zdCBtb2R1bGUgPSBydW50aW1lLm1vZHVsZSgoYXdhaXQgaW1wb3J0KFwiaHR0cHM6Ly9hcGkub2JzZXJ2YWJsZWhxLmNvbS9Ab2JzZXJ2YWJsZWhxL3Bsb3QtZ2FsbGVyeS5qcz92PTRcIikpLmRlZmF1bHQpO1xuICAgIGNvbnN0IGRhdGEgPSBbXTtcbiAgICBtb2R1bGUuZGVmaW5lKFwibWRcIiwgKCkgPT4gU3RyaW5nLnJhdyk7XG4gICAgbW9kdWxlLnJlZGVmaW5lKFwicHJldmlld3NcIiwgKCkgPT4gKGNodW5rKSA9PiBkYXRhLnB1c2goLi4uY2h1bmspKTtcbiAgICBjb25zdCB2YWx1ZXMgPSBbXTtcbiAgICBmb3IgKGNvbnN0IG91dHB1dCBvZiBtb2R1bGUuX3Jlc29sdmUoXCJwcmV2aWV3c1wiKS5fb3V0cHV0cykge1xuICAgICAgaWYgKG91dHB1dC5fbmFtZSkge1xuICAgICAgICB2YWx1ZXMucHVzaChtb2R1bGUudmFsdWUob3V0cHV0Ll9uYW1lKSk7XG4gICAgICB9XG4gICAgfVxuICAgIGF3YWl0IFByb21pc2UuYWxsKHZhbHVlcyk7XG4gICAgcmV0dXJuIGRhdGE7XG4gIH1cbn07XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQXNiLFNBQVEsZUFBYztBQUU1YyxJQUFPLHVCQUFRO0FBQUEsRUFDYixNQUFNLE9BQU87QUFDWCxVQUFNLFVBQVUsSUFBSSxRQUFRO0FBQzVCLFVBQU0sU0FBUyxRQUFRLFFBQVEsTUFBTSxPQUFPLGdFQUFnRSxHQUFHLE9BQU87QUFDdEgsVUFBTSxPQUFPLENBQUM7QUFDZCxXQUFPLE9BQU8sTUFBTSxNQUFNLE9BQU8sR0FBRztBQUNwQyxXQUFPLFNBQVMsWUFBWSxNQUFNLENBQUMsVUFBVSxLQUFLLEtBQUssR0FBRyxLQUFLLENBQUM7QUFDaEUsVUFBTSxTQUFTLENBQUM7QUFDaEIsZUFBVyxVQUFVLE9BQU8sU0FBUyxVQUFVLEVBQUUsVUFBVTtBQUN6RCxVQUFJLE9BQU8sT0FBTztBQUNoQixlQUFPLEtBQUssT0FBTyxNQUFNLE9BQU8sS0FBSyxDQUFDO0FBQUEsTUFDeEM7QUFBQSxJQUNGO0FBQ0EsVUFBTSxRQUFRLElBQUksTUFBTTtBQUN4QixXQUFPO0FBQUEsRUFDVDtBQUNGOyIsCiAgIm5hbWVzIjogW10KfQo=

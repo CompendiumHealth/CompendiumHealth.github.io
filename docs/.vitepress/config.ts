@@ -36,10 +36,10 @@ export default defineConfig({
     }
   },
   head: [
-    ["link", {rel: "apple-touch-icon", href: "https://static.observablehq.com/favicon-512.0667824687f99c942a02e06e2db1a060911da0bf3606671676a255b1cf97b4fe.png"}],
-    ["link", {rel: "icon", type: "image/png", href: "https://static.observablehq.com/favicon-512.0667824687f99c942a02e06e2db1a060911da0bf3606671676a255b1cf97b4fe.png", sizes: "512x512"}],
-    ["script", {async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-9B88TP6PKQ"}],
-    ["script", {}, "window.dataLayer=window.dataLayer||[];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js',new Date());\ngtag('config','G-9B88TP6PKQ');"]
+    ["link", {rel: "apple-touch-icon", href: "https://github.com/zephyrhealthcare/zephyrhealthcare.github.io/blob/d07c3d63676c4b4f2661e0dea985296406809c4b/docs/public/zephyr_v3.png"}],
+    ["link", {rel: "icon", type: "image/png", href: "https://github.com/zephyrhealthcare/zephyrhealthcare.github.io/blob/d07c3d63676c4b4f2661e0dea985296406809c4b/docs/public/zephyr_v3.png", sizes: "512x512"}],
+    // ["script", {async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-9B88TP6PKQ"}],
+    // ["script", {}, "window.dataLayer=window.dataLayer||[];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js',new Date());\ngtag('config','G-9B88TP6PKQ');"]
   ],
   // sitemap: {
   //   hostname: 'https://observablehq.com/plot/'

@@ -43,7 +43,7 @@ hero:
       link: /what-is-zephyr/
     - theme: alt
       text: Explore a demo!
-      link: /demo/
+      link: https://www.zephyr.health/demo
     - theme: alt
       text: Our Team
       link: /our-team/

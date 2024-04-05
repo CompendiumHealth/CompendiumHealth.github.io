@@ -2,6 +2,18 @@ import {fileURLToPath, URL} from "node:url";
 import path from "node:path";
 import {defineConfig} from "vitepress";
 import plot from "./markdown-it-plot.js";
+import type { Plugin } from 'vite';
+
+// https://github.com/vuejs/vitepress/issues/1040
+const VPLinkPatch = (): Plugin => ({
+  name: 'make-all-external',
+  enforce: 'pre',
+  transform: (code, id) => {
+    if (id.endsWith('VPLink.vue')) {
+      return code.replace('/^[a-z]+:/i', '/^([a-z]+:|\/demo)/i');
+    }
+  },
+});
 
 // https://vitepress.dev/reference/site-config
 // prettier-ignore
@@ -33,6 +45,7 @@ export default defineConfig({
   //   hostname: 'https://observablehq.com/plot/'
   // },
   themeConfig: {
+    plugins: [VPLinkPatch()],
     // https://vitepress.dev/reference/default-theme-config
     // Theme related configurations.
     logo: {
@@ -42,7 +55,7 @@ export default defineConfig({
     
     nav: [
       { text: 'What is Zephyr?', link: '/what-is-zephyr/' },
-      { text: 'Explore a demo!', link: "https//www.zephyr.health/demo"},
+      { text: 'Explore a demo!', link: "https://www.zephyr.health/demo"},
       {
         text: 'Dev Blog',
         items: [

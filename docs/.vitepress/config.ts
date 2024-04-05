@@ -42,7 +42,7 @@ export default defineConfig({
     
     nav: [
       { text: 'What is Zephyr?', link: '/what-is-zephyr/' },
-      { text: 'Explore a demo!', link: '/demo/' },
+      { text: 'Explore a demo!', link: "https//www.zephyr.health/demo"},
       {
         text: 'Dev Blog',
         items: [

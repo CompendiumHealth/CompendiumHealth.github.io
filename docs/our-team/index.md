@@ -2,11 +2,13 @@
 
 Hello there!  We're [Shreyas Bhave](https://www.linkedin.com/in/shreyasabhave/) and [Tony Sun](https://www.linkedin.com/in/toekneesunshine/), two recently-defended Columbia PhD students who became close friends over the course of the PhD grind. We've worked on [research papers together](https://arxiv.org/pdf/2203.05174v1.pdf), competed in [nationwide healthcare-related machine learning competitions](https://www.dbmi.columbia.edu/cms-ai-team/), and even interned together as machine learning researchers at [Tempus](https://www.tempus.com/), a health-tech unicorn. 
 
-<p align="center">
-  <img alt="Shreyas Bhave" src="./shreyas.png" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Tony Sun" src="./tony.png" width="45%">
-</p>
+|Shreyas Bhave|Tony Sun|
+|:-:|:-:|
+|![Shreyas Bhave](./shreyas.png)|![Tony Sun](./tony.png)|
+
+<!-- <p float="middle">
+  <img alt="Shreyas Bhave" src="./shreyas.png" width="45%"> <img alt="Tony Sun" src="./tony.png" width="45%">
+</p> -->
 
 # Why are we building Zephyr Health?
 

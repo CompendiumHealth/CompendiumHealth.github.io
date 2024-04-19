@@ -9,12 +9,20 @@ import * as d3 from "d3";
 
 While two different providers in your area might both be in-network and offer the same service, their prices could vary drastically! Below, we visualize the prices for a pelvic MRI with and without contrast (CPT: 72197) across the United States for patients on the [United Healthcare Choice Plus plan](https://www.uhc.com/individuals-families/health-plans-through-work/choice-plus): 
 
-:::plot
+:::plot https://observablehq.com/@zephyrhealth/plot-all-histogram
 ```js
-Plot.rectY({length: 10000}, Plot.binX({y: "count"}, {x: d3.randomNormal()})).plot()
+Plot.plot({
+  y: {grid: true},
+  marks: [
+    Plot.rectY(data,
+               Plot.binX(
+                {y: "count"},
+                {x: "all_rates"},
+              )),
+    Plot.ruleY([0])
+  ]
+})
 ```
 :::
 
-<!-- <Example spec="/specs/yaml/moving-average-all-providers.yaml" /> -->
-
-This shows the distribution of negotiated rates for a particular MRI across licensed providers in the United States. When we subset...
+This shows the distribution of negotiated rates for a particular MRI across licensed providers in the United States. Visually, there's a huge disparity in negotiated in-network rates.

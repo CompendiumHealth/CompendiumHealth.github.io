@@ -51,7 +51,7 @@ But this only shows the main body of the distribution: in the above visual we've
 
 # But how do prices relate to perceived health quality?
 
-Well, that's a great question. Here, we've parsed the data for NYC and SF Bay Area medical organizations that offer this particular pelvic MRI which also self-identify as diagnostic radiology centers using CMS taxonomy codes. We join these datasets with scraped Yelp star ratings as a proxy for "quality", and we find that, upon initial examination, most of the Yelp ratings are low, with an approximately normal distribution centered around 2.5 stars:
+Well, that's a great question. Here's the parsed data for NYC and SF Bay Area medical organizations that offer this particular pelvic MRI - we've processed it so that we're only showing organizations that self-identify as diagnostic radiology centers, using CMS taxonomy codes. We join these datasets with Yelp star ratings, which we can use as a proxy for "quality". Upon initial examination, most of the Yelp ratings are low, with an approximately normal distribution centered around 2.5 stars (it seems like New Yorkers are more critical in their healthcare reviews):
 
 :::plot hidden defer
 ```js
@@ -69,7 +69,7 @@ Plot.plot({
 ```
 :::
 
-Amusingly, when we consider a comparison of negotiated-rate versus Yelp ratings, there really isn't much of a correlation.
+Amusingly, when we consider a comparison of negotiated-rate versus Yelp ratings, there really isn't much of a correlation. If you hover over the plot below, you can explore the outliers among the various NYC and Bay Area medical organizations (such as Stanford, which has an average 2.2 Yelp score and an exorbitant $2.6k cost).
 
 :::plot hidden defer
 ```js

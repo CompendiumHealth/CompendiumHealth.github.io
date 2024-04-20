@@ -14,8 +14,14 @@ const us_costs = shallowRef([
   {}
 ]);
 
+const yelp_dist = shallowRef([
+  {}
+]);
+
 onMounted(() => {
   d3.csv("../data/US_rates.csv", d3.autoType).then((data) => (us_costs.value = data));
+  d3.csv("../data/NYC_rates.csv", d3.autoType).then((data) => (us_costs.value = data));
+  d3.csv("../data/yelp_quality_scatter.csv", d3.autoType).then((data) => (yelp_dist.value = data));
 });
 
 </script>
@@ -41,4 +47,37 @@ Plot.plot({
 ```
 :::
 
-But this only shows the main body of the distribution: in the above plot we've truncated hospitals and private clinics that charge more than $3,000 for this same CPT code. While these prices are much less common, 18,000 providers still have prices $3,000 as their negotiated rate!
+But this only shows the main body of the distribution: in the above visual we've truncated hospitals and private clinics that charge more than $3,000 for this CPT code. There are more than **18,000 providers and organizations** that have negotiated rates for more than $3,000; many of these providers happen to be renown American academic medical centers!
+
+# But how do prices relate to perceived health quality?
+
+Well, that's a great question. Here, we've parsed the data for NYC and SF Bay Area medical organizations that offer this particular pelvic MRI which also self-identify as diagnostic radiology centers using CMS taxonomy codes. We join these datasets with scraped Yelp star ratings as a proxy for "quality", and we find that, upon initial examination, most of the Yelp ratings are low, with an approximately normal distribution centered around 2.5 stars:
+
+:::plot hidden defer
+```js
+Plot.plot({
+  y: {grid: true},
+  x: {domain: [1, 5]},
+  color: {legend: true},
+  marks: [
+    Plot.rectY(yelp_dist, Plot.binX({y2: "count"}, {x: {thresholds: 20, value: "score"}, fill: "location", mixBlendMode: "multiply"})),
+    // Plot.rectY(yelp_dist, Plot.binX({y: "count"}, {filter: (d) => d.location === "NYC", x: "score", fill: "location", insetLeft: 4})),
+    // Plot.rectY(yelp_dist, Plot.binX({y: "count"}, {filter: (d) => d.location === "Bay Area", x: "score", fill: "location", insetRight: 4})),
+    Plot.ruleY([0])
+  ]
+})
+```
+:::
+
+Amusingly, when we consider a comparison of negotiated-rate versus Yelp ratings, there really isn't much of a correlation.
+
+:::plot hidden defer
+```js
+Plot.plot({
+  color: {legend: true},
+  marks: [
+    Plot.dot(yelp_dist, {x: "score", y: "all_rates", stroke: "location", channels: {name: "business_name"}, tip: true})
+  ]
+})
+```
+:::

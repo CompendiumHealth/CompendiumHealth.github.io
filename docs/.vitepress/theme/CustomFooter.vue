@@ -10,7 +10,7 @@
         <div class="fb6">
           <div class="mb2 fw6 f14">Resources</div>
           <ul>
-            <li class="mb2"><a target="_blank" href="zephyr.health/privacy">Privacy Policy</a></li>
+            <li class="mb2"><a target="_blank" href="privacy">Privacy Policy</a></li>
             <li class="mb2"><a href="mailto:zephyrhealthcarellc@gmail.com">Contact Us</a></li>
           </ul>
         </div>

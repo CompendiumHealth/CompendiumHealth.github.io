@@ -10,9 +10,8 @@
         <div class="fb6">
           <div class="mb2 fw6 f14">Resources</div>
           <ul>
-            <li class="mb2"><a target="_blank" href="https://talk.observablehq.com">Privacy Policy</a></li>
-            <li class="mb2"><a target="_blank" href="https://observablehq.com/slack/join">Contact Us</a></li>
-            <li class="mb2"><a target="_blank" href="https://github.com/observablehq/plot/releases">Releases</a></li>
+            <li class="mb2"><a target="_blank" href="zephyr.health/privacy">Privacy Policy</a></li>
+            <li class="mb2"><a href="mailto:zephyrhealthcarellc@gmail.com">Contact Us</a></li>
           </ul>
         </div>
         <!-- <div class="fb6 flex-grow-1">
@@ -29,7 +28,6 @@
     </div>
     <div class="flex ma4">
       © {{new Date().getUTCFullYear()}} Zephyr Health
-      <a class="ml1" target="_blank" href="https://github.com/observablehq/plot/blob/main/LICENSE">ISC License</a>
     </div>
   </footer>
 </template>

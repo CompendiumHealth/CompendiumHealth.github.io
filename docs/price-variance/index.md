@@ -47,7 +47,7 @@ Plot.plot({
 ```
 :::
 
-But this only shows the main body of the distribution: in the above visual we've truncated hospitals and private clinics that charge more than $3,000 for this CPT code. There are more than **18,000 providers and organizations** that have negotiated rates for more than $3,000; many of these providers happen to be renown American academic medical centers!
+But this only shows the main body of the distribution: in the above visual we've truncated hospitals and private clinics that charge more than $3,000 for this CPT code. There are more than **18,000 providers and organizations** that have negotiated rates for more than $3,000; many of these providers happen to be renowned American academic medical centers!
 
 # But how do prices relate to perceived health quality?
 

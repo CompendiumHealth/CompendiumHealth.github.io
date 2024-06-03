@@ -27,6 +27,6 @@
 }
 </style>
 
-# How does Zephyr Health make money?
+# How does Compendia make money?
 
-Consumers don't have to pay anything to browse or make appointments on our platform! It's win-win: we charge practice providers a referral fee for every new patient routed to their centers, much as Amazon charges fulfillment and referral fees.
+Consumers don't have to pay anything to browse or make appointments on our platform! It's win-win: we partner with self-funded health plans as a benefits plan, and additionally charge practice providers a referral fee for every new patient routed to their centers, much as Amazon charges fulfillment and referral fees.

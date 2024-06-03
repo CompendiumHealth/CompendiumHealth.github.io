@@ -6,7 +6,7 @@ titleTemplate: "Shop and compare diagnostic testing in your area"
 head:
   - - meta
     - name: title
-      content: Zephyr Health
+      content: Compendium Health
   - - meta
     - name: description
       content: Shop and compare diagnostic testing in your area
@@ -15,13 +15,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: "@zephyrhealth"
+      content: "@compendiumhealth"
   - - meta
     - property: og:description
       content: Shop and compare diagnostic testing in your area
   - - meta
     - property: og:title
-      content: Zephyr Health
+      content: Compendium Health
   - - meta
     - property: og:type
       content: article
@@ -39,7 +39,7 @@ hero:
     alt: ZephyrHealth logo which is roughly based on the ATLA air nation logo.
   actions:
     - theme: brand
-      text: What is Zephyr Health?
+      text: What is Compendium Health?
       link: /what-is-zephyr/
     - theme: alt
       text: Explore a demo!

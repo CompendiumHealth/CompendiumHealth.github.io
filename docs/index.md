@@ -9,7 +9,7 @@ head:
       content: Compendium Health
   - - meta
     - name: description
-      content: Shop and compare diagnostic testing in your area
+      content: Shop and compare healthcare costs in your area
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -18,7 +18,7 @@ head:
       content: "@compendiumhealth"
   - - meta
     - property: og:description
-      content: Shop and compare diagnostic testing in your area
+      content: Shop and compare healthcare costs in your area
   - - meta
     - property: og:title
       content: Compendium Health
@@ -33,7 +33,7 @@ hero:
   text: |
     Shop, compare, and directly book diagnostic testing
   tagline: |
-    Zephyr Health enables you to shop, compare and book diagnostic testing with confidence.
+    Compendium Health enables you to shop, compare and book healthcare with confidence.
   image:
     src: /zephyr_v3.png
     alt: ZephyrHealth logo which is roughly based on the ATLA air nation logo.
@@ -57,9 +57,9 @@ features:
     details: View and read reviews for high-quality practice providers in your area.
   - icon: 🗓️
     title: Schedule appointments without picking up a phone
-    details: Directly view bookable appointments that fit with your schedule.
+    details: Import your calendar, and our AI scheduler will follow up with your appointment details.
   - icon: 🚀
-    title: Zephyr's no surprises pricing guarantee
+    title: Compendium's no surprises pricing guarantee
     details: Shop and browse with confidence - when you pay up-front, know that you won't be surprised with bills later.
 ---
 <!-- 

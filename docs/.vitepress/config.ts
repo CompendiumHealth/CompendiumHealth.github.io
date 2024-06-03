@@ -18,7 +18,7 @@ const VPLinkPatch = (): Plugin => ({
 // https://vitepress.dev/reference/site-config
 // prettier-ignore
 export default defineConfig({
-  title: "Zephyr Health",
+  title: "Compendium Health",
   description: "Shop, compare, and directly book diagnostic testing",
   // base: "/plot/",
   cleanUrls: true,
@@ -54,7 +54,7 @@ export default defineConfig({
     },
     
     nav: [
-      { text: 'What is Zephyr?', link: '/what-is-zephyr/' },
+      { text: 'What is Compendium Health?', link: '/what-is-zephyr/' },
       { text: 'Explore a demo!', link: "https://www.zephyr.health/demo"},
       {
         text: 'Dev Blog',
@@ -68,11 +68,11 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          text: 'What is Zephyr Health?',
+          text: 'What is Compendium Health?',
           collapsed: true,
           items: [
-            { text: 'What is Zephyr Health?', link: '/what-is-zephyr/' },
-            { text: 'How much does Zephyr cost?', link: '/zephyr-money/' },
+            { text: 'What is Compendium Health?', link: '/what-is-zephyr/' },
+            { text: 'How much does Compendium cost?', link: '/zephyr-money/' },
             // { text: 'Get Started', link: '/get-started/' }
           ]
         },

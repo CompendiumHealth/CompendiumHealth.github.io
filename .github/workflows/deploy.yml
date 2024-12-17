@@ -19,9 +19,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
-      - run: yarn install
-      - run: yarn build
+          cache: npm
+      - run: npm install
+      - run: npm run build
       - uses: actions/configure-pages@v4
       - name: Deploy
         id: deployment

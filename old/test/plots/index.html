@@ -1,0 +1,110 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8" />
+</head>
+<style>
+  body {
+    max-width: 960px;
+    margin: 1em auto;
+    padding: 0 1em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      --plot-background: rgb(31, 31, 31);
+      background: var(--plot-background);
+      color: rgb(223, 223, 214);
+    }
+    svg.plot-d6a7b5 {
+      --plot-background: inherit;
+    }
+  }
+
+  figure {
+    font: 13px/1.2 system-ui;
+    margin: 0;
+    max-width: 640px;
+  }
+
+  figcaption {
+    color: #838383;
+  }
+</style>
+<script type="module">
+  import * as tests from "./index.ts";
+
+  if (location.pathname !== "/") {
+    location = `/${location.search}${location.hash}`;
+    throw new Error("unexpected path");
+  }
+
+  const select = document.createElement("select");
+  select.autofocus = true;
+  select.style.margin = "1em 0";
+  select.onchange = () => {
+    const {value} = select;
+    history.pushState({value}, "", `?test=${value}`);
+    render();
+  };
+
+  select.onkeydown = (event) => {
+    if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+    switch (event.key) {
+      case "ArrowLeft": {
+        if (select.selectedIndex > 0) {
+          --select.selectedIndex;
+          select.onchange();
+        }
+        break;
+      }
+      case "ArrowRight": {
+        if (select.selectedIndex < select.options.length - 1) {
+          ++select.selectedIndex;
+          select.onchange();
+        }
+        break;
+      }
+    }
+  };
+
+  select.append(
+    ...Object.keys(tests).map((key) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = key;
+      return option;
+    })
+  );
+
+  addEventListener("popstate", (event) => {
+    const {value} = history.state;
+    select.value = value;
+    render();
+  });
+
+  const initialValue = new URL(location).searchParams.get("test");
+  if (tests[initialValue]) select.value = initialValue;
+
+  document.body.append(select);
+
+  const info = document.createElement("SPAN");
+  info.style = "margin-left: 1em; font: 10px sans-serif;";
+  document.body.append(info);
+
+  let currentChart = document.createElement("DIV");
+  document.body.append(currentChart);
+
+  async function render() {
+    const newChart = document.createElement("DIV");
+    currentChart.replaceWith(newChart);
+    currentChart = newChart;
+    info.textContent = "⋯";
+    const start = performance.now();
+    const plot = await tests[select.value]();
+    const end = performance.now();
+    info.textContent = `${(end - start).toFixed(0)} ms`;
+    newChart.append(plot);
+  }
+
+  render();
+</script>

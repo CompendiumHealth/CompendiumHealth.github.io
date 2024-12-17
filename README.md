@@ -1,3 +1,2 @@
-# Zephyr Health website
-
-This website was forked from the Observable Plot website.
+## README
+Use yarn to run this React page!

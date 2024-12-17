@@ -12,7 +12,12 @@
           "message": 5,
           "code": 6
         }
-      ]
+      ],
+
+      "rules": {
+        "import/prefer-default-export": "off" 
+      }
     }
   ]
 }
+

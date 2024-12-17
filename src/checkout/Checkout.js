@@ -1,25 +1,25 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+// import Card from '@mui/material/Card';
+// import CardContent from '@mui/material/CardContent';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid2';
-import Stack from '@mui/material/Stack';
+// import Stack from '@mui/material/Stack';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import AddressForm from './components/AddressForm';
-import Info from './components/Info';
-import InfoMobile from './components/InfoMobile';
+// import Info from './components/Info';
+// import InfoMobile from './components/InfoMobile';
 import ScheduleSelector from 'react-schedule-selector';
 import Review from './components/Review';
-import SitemarkIcon from './components/SitemarkIcon';
+// import SitemarkIcon from './components/SitemarkIcon';
 import AppTheme from '../shared-theme/AppTheme';
-import ColorModeIconDropdown from '../shared-theme/ColorModeIconDropdown';
+// import ColorModeIconDropdown from '../shared-theme/ColorModeIconDropdown';
 
 const steps = ['Info', 'Availability', 'Confirmation'];
 

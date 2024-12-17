@@ -2,19 +2,19 @@ import * as React from 'react';
 
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
+// import List from '@mui/material/List';
+// import ListItem from '@mui/material/ListItem';
+// import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 const addresses = ['6914 Hollywood Blvd', 'Los Angeles', 'California', '90028', 'USA'];
-const payments = [
-  { name: 'Card type:', detail: 'Visa' },
-  { name: 'Card holder:', detail: 'Tony Sun' },
-  { name: 'Card number:', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date:', detail: '04/2024' },
-];
+// const payments = [
+//   { name: 'Card type:', detail: 'Visa' },
+//   { name: 'Card holder:', detail: 'Tony Sun' },
+//   { name: 'Card number:', detail: 'xxxx-xxxx-xxxx-1234' },
+//   { name: 'Expiry date:', detail: '04/2024' },
+// ];
 
 export default function Review() {
   return (

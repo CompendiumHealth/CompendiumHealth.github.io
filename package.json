@@ -31,7 +31,7 @@
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject"
   },
-  "homepage": "http://CompendiumHealth.github.io/CompendiumHealth.github.io",
+  "homepage": "demo",
   "eslintConfig": {
     "extends": [
       "react-app",
